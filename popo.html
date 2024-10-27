@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAIFEDDINE MOHAMED</title> 
+    <link href="aaa.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="main-title">
+            <h3>SAIFEDDINE SIMO</h3>
+            <p>OMISSE</p>
+        </div>
+        <img src="zzzz.jpg" alt="Description de l'image" class="header-image">
+    </header>
+
+    <section>
+        <h2>A Propos De Moi :</h2>
+        <p>
+            Je m'appelle Mohamed Saifeddine, j'ai 19 ans et je suis né à Casablanca. Actuellement étudiant à
+            l’EMSI Les Orangers en filière 3IIR, je suis passionné par la programmation et les jeux vidéo, en
+            particulier les jeux compétitifs. Depuis plusieurs années, j'ai nourri un vif intérêt pour le gaming,
+            ce qui m’a amené à rejoindre l'équipe ASS (Association Sportive de Salé) en tant que joueur de Valorant.
+            Cette expérience m'a permis de développer des compétences en stratégie et en travail d'équipe, des qualités
+            qui se reflètent également dans mon parcours académique et professionnel.
+        </p>
+    </section>
+
+    <section>
+        <h2>Hobbies Et Objectifs :</h2>
+        <ul> 
+            <li>Programmation</li>
+            <li>Gaming</li>
+            <li>Esports</li>
+            <li>Découverte de nouveaux lieux</li>
+            <li>Voitures et automobile</li>
+        </ul>
+        <h2>Objectifs :</h2>
+        <ol>
+            <li>Maîtriser le langage C++</li>
+            <li>Apprendre et maîtriser SQL</li>
+            <li>Développer des compétences solides en développement web</li>
+            <li>Améliorer mon niveau dans le jeu FC25 pour atteindre le niveau pro</li>
+            <li>Être capable de réaliser n'importe quel projet de manière autonome</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Homies Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Âge</th>
+                    <th>Ville</th>
+                    <th>Profil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Khamliche</td>
+                    <td>Zakaria</td>
+                    <td>20</td>
+                    <td>Casablanca</td>
+                    <td><a href="https://www.instagram.com/zak.kh.2/" target="_blank">Voir profil</a></td>
+                </tr>
+                <tr>
+                    <td>Habachi</td>
+                    <td>Anas</td>
+                    <td>23</td>
+                    <td>Khouribga</td>
+                    <td><a href="https://www.instagram.com/anass_7bx/" target="_blank">Voir profil</a></td>
+                </tr>
+                <tr>
+                    <td>Habbaz</td>
+                    <td>Adnane</td>
+                    <td>21</td>
+                    <td>Casablanca</td>
+                    <td><a href="https://www.instagram.com/4dnane_9/" target="_blank">Voir profil</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Formulaire De Contact</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="prenom">Prenom</label>
+            <input type="text" id="prenom" name="prenom" required><br>
+            
+            <label for="email">Adresse Mail</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label>Envoyer Un Message</label><br>
+            <textarea name="message" rows="5" cols="30" required></textarea><br>
+            
+            <button type="submit">Soumettre</button>
+        </form>
+    </section>
+    <script>
+        function validateForm() {
+            const nom = document.getElementById("nom").value;
+            const prenom = document.getElementById("prenom").value;
+            const email = document.getElementById("email").value;
+            const errorMessage = document.getElementById("error-message");
+            errorMessage.textContent = ""; 
+
+            if (nom.trim() === "") {
+                errorMessage.textContent = "Le champ Nom ne doit pas être vide.";
+                return false; 
+            }
+
+            if (prenom.trim() === "") {
+                errorMessage.textContent = "Le champ Prénom ne doit pas être vide.";
+                return false; 
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+            if (!emailRegex.test(email)) {
+                errorMessage.textContent = "Veuillez entrer une adresse email valide.";
+                return false; 
+            }
+
+            alert("Formulaire soumis avec succès !");
+            return true;
+        }
+    </script>
+</body>
+</html>
